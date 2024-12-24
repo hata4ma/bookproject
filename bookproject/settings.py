@@ -77,12 +77,24 @@ WSGI_APPLICATION = 'bookproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# For Render add 1 line
+import dj_database_url
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# For Render add 7 lines
+if not DEBUG:
+  DATABASES = {
+    'default': dj_database_url.config(
+      # Replace this value with your local database's connection string.
+      default='postgresql://postgres:postgres@localhost:5432/bookproject', conn_max_age=600
+     )
+  }
 
 
 # Password validation
