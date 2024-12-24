@@ -79,6 +79,7 @@ WSGI_APPLICATION = 'bookproject.wsgi.application'
 
 # For Render add 1 line
 import dj_database_url
+allowed hosts = ['*']
 
 DATABASES = {
     'default': {
