@@ -6,7 +6,7 @@
 # psycopg2-binary==2.9.10
 # sqlparse==0.5.2
 # typing_extensions==4.12.2
-#whitenoise==6.8.2
+# whitenoise==6.8.2
 asgiref==3.8.1
 black==24.10.0
 Brotli==1.1.0
