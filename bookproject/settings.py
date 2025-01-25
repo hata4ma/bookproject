@@ -87,8 +87,7 @@ DATABASES = {
 if not DEBUG:
     DATABASES = {
         "default": dj_database_url.config(
-            # Replace this value with your local database's connection
-string.
+            # Replace this value with your local database's connection string.
             default="postgresql://postgres:postgres@localhost:5432/bookproject",
             conn_max_age=600,
         )
@@ -96,25 +95,20 @@ string.
 
 
 # Password validation
-#
-https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME":
-"django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        "NAME":
-"django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        "NAME":
-"django.contrib.auth.password_validation.CommonPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        "NAME":
-"django.contrib.auth.password_validation.NumericPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -138,8 +132,7 @@ STATIC_URL = "/static/"
 
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-    STATICFILES_STORAGE =
-"whitenoise.storage.CompressedManifestStaticFilesStorage"
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
 
